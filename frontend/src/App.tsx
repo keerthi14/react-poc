@@ -1,29 +1,17 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
 
-import './App.css'
-
-function App() {
+const App: React.FC = () => {
   return (
-    <div
-      style={{
-        width: "100vw",
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        background: "#fff"
-      }}
-    >
-      <div style={{ textAlign: "center" }}>
-        <h1>Hello, React!</h1>
-        <button
-          onClick={() => alert("Button clicked!")}
-          style={{ marginTop: "16px", padding: "8px 16px", fontSize: "16px" }}
-        >
-          Click Me
-        </button>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
-export default App
+export default App;

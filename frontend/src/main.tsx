@@ -8,3 +8,5 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+// The App is already wrapped with <StrictMode> and rendered using createRoot above. 
+// No further code is needed here per requirements.
